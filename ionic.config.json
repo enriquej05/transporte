@@ -1,0 +1,7 @@
+{
+  "name": "transportefrontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
