@@ -19,8 +19,9 @@ export class AuthenticationService {
   async loadToken() {
     const token = await Storage.get({ key: TOKEN_KEY });    
     if (token && token.value) {
-      console.log('set token: ', token.value);
+      // console.log(token.value);
       this.token = token.value;
+      // console.log(this.token);
       this.isAuthenticated.next(true);
     } else {
       this.isAuthenticated.next(false);
@@ -61,4 +62,32 @@ export class AuthenticationService {
     this.isAuthenticated.next(false);
     return Storage.remove({key: TOKEN_KEY});
   }
+  // async tokenReturn(){
+  //   hola = "hola"
+  //   return  await Storage.get({ key: 'my-token' });
+  // }
+  tokenReturn() {
+    // const checkName = async () => {
+    //   const { value } = await Storage.get({ key: 'my-token' });
+      
+    //   // alert(`Hello ${this.token}!`);
+    //   return alert(`Hello ${value}!`);
+    // };
+    let rToken = async () =>{
+      const token = await Storage.get({ key: 'my-token' });
+      return token;
+    }
+    
+      // return rToken;
+  }
+  async returnT(){
+    const token = await Storage.get({ key: 'my-token' });
+
+    return token
+  }
+  getToken(){
+    return Storage.get({key: TOKEN_KEY});
+  }
+  
+  
 }
