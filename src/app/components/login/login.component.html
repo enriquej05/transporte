@@ -24,15 +24,15 @@
       </div>
     </div>
  
-    <ion-button type="submit" expand="block" [disabled]="!credentials.valid">Log in</ion-button>
-    <ion-button type="button" expand="block" color="light" fill="clear">Not yet a member? Sign up!
+    <ion-button class="btn-1" type="submit" expand="block" [disabled]="!credentials.valid" shape="round">Log in</ion-button>
+    <ion-button [routerLink]="['/register']" type="button" expand="block" fill="clear">¿Aun no tienes una cuenta? Registrate
     </ion-button>
  
-    <ion-button type="button" expand="block" color="tertiary">
+    <ion-button class="btn-1" type="button" expand="block" color="tertiary" shape="round">
       <ion-icon name="logo-google" slot="start"></ion-icon>
       Sign in with Google
     </ion-button>
-    <ion-button type="button" expand="block" color="tertiary">
+    <ion-button class="btn-1" type="button" expand="block" color="tertiary" shape="round">
       <ion-icon name="logo-apple" slot="start"></ion-icon>
       Sign in with Apple
     </ion-button>

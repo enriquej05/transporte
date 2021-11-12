@@ -31,15 +31,16 @@
         </div>
       </div>
    
-      <ion-button type="submit" expand="block" [disabled]="!credentials.valid">Registrarse</ion-button>
-      <ion-button type="button" expand="block" color="light" fill="clear">Ya tienes una cuenta? Iniciar sesión!
+
+      <ion-button class="btn-1" type="submit" expand="block" [disabled]="!credentials.valid" shape="round" >Registrarse</ion-button>
+      <ion-button [routerLink]="['/login']" type="button" expand="block" fill="clear" >Ya tienes una cuenta? Iniciar sesión!
       </ion-button>
-   
-      <ion-button type="button" expand="block" color="tertiary">
+
+      <ion-button class="btn-1" type="button" expand="block" color="tertiary" shape="round">
         <ion-icon name="logo-google" slot="start"></ion-icon>
         Sign in with Google
       </ion-button>
-      <ion-button type="button" expand="block" color="tertiary">
+      <ion-button class="btn-1"type="button" expand="block" color="tertiary" shape="round">
         <ion-icon name="logo-apple" slot="start"></ion-icon>
         Sign in with Apple
       </ion-button>
