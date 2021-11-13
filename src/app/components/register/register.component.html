@@ -5,9 +5,56 @@
 </ion-header> -->
  
 <ion-content>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Steps Cancún</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['/register']">Registrate</ion-item>
+        <ion-item [routerLink]="['/login']">Iniciar Sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Steps Cancún</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['/register']">Registrate</ion-item>
+        <ion-item [routerLink]="['/login']">Inicicar Sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-menu side="end" type="push" contentId="main">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title>End Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+  <div align="center">
+    <img class="logo" src="https://i.ibb.co/gZtj8sZ/Steps-Canc-n-2.png" alt="Steps-Canc-n-2" >
+  </div>
  
     <form (ngSubmit)="register()" [formGroup]="credentials">
-      <div class="input-group">
+      <div class="input-group margin">
         <ion-item>
           <ion-input type="text" placeholder="Nombre" formControlName="name"></ion-input>
         </ion-item>
@@ -33,16 +80,22 @@
    
 
       <ion-button class="btn-1" type="submit" expand="block" [disabled]="!credentials.valid" shape="round" >Registrarse</ion-button>
-      <ion-button [routerLink]="['/login']" type="button" expand="block" fill="clear" >Ya tienes una cuenta? Iniciar sesión!
-      </ion-button>
+      
+      
 
-      <ion-button class="btn-1" type="button" expand="block" color="tertiary" shape="round">
+      <ion-button class="btn-1 margin" type="button" expand="block" color="tertiary" shape="round">
         <ion-icon name="logo-google" slot="start"></ion-icon>
-        Sign in with Google
+        Iniciar con Google
       </ion-button>
       <ion-button class="btn-1"type="button" expand="block" color="tertiary" shape="round">
         <ion-icon name="logo-apple" slot="start"></ion-icon>
-        Sign in with Apple
+        Iniciar con Apple
       </ion-button>
+
+      <div align="center" class="margin">
+        <div>¿Ya tienes una cuenta?</div>
+      <ion-button [routerLink]="['/login']" type="button" expand="block" fill="clear" >Iniciar sesión!</ion-button>
+      </div>
+
     </form>
   </ion-content>

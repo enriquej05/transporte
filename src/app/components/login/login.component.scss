@@ -1,15 +1,17 @@
-ion-content {
-    --padding-top: 40%;
-    --padding-start: 10%;
-    --padding-end: 10%;
-}
- 
-.input-group {
+ .input-group {
     background: #fff;
     overflow: hidden;
     margin-bottom: 15px;
+    display: block;
+}
+
+.logo{
+    width: 50%;
     margin-top: 30%;
 }
+.my-custom-menu {
+    --width: 80%;
+  }
  
 .errors {
     font-size: small;
@@ -21,8 +23,10 @@ ion-content {
 }
 
 .btn-1{
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 10px;
     color: #fff;
     text-align: center;
+}
+.margin{
+    margin-top: 10%;
 }
